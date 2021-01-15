@@ -1,0 +1,77 @@
+.feature {
+    background-color: #F0F0F0;
+    margin-top: 15px;
+    @media (min-width: 768px) {
+        margin-top: 30px;
+    }
+    &_block {
+        display: flex;
+        overflow-x: scroll;
+        position: relative;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &_item {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px 0px;
+            @media (min-width: 1200px) {
+                padding: 50px 0px;
+            }
+            & h4 {
+                font-family: "Montserrat-SemiBold";
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.13em;
+                color: #292929;
+                position: relative;
+                @media (min-width: 1200px) {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -10px;
+                    width: 60px;
+                    height: 2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color:#D7BFA9;
+                }
+            }
+            & p {
+                font-family: "Montserrat-Regular";
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: #292929;
+                max-width: 223px;
+                margin-top: 20px;
+                @media (min-width: 1200px) {
+                    max-width: 100%;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            justify-content: space-between;
+            &_item {
+                width: 223px;
+                min-width: 223px;
+            }
+        }
+        @media (min-width: 1200px) {
+            &_item {
+                width: 263px;
+                min-width: 263px;
+            }
+        }
+    }
+}

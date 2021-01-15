@@ -1,0 +1,116 @@
+.main {
+    margin-top: 54px;
+    @media (min-width: 768px) {
+        margin-top: 122px;
+    }
+    @media (min-width: 1200px) {
+        position: relative;
+        margin-top: 0px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 100%;
+            background-color: #F0F0F0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &_slider {
+        &_content {
+            &_item {
+                position: relative;
+                height: 334px;
+                @media (min-width: 768px) {
+                    height: 708px;
+                }
+                @media (min-width: 1200px) {
+                    height: 727px;
+                }
+                &_title {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    top: 20px;
+                    width: 100%;
+                    & span {
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 1.2em;
+                        color: #FFFFFF;
+                        font-family: "Montserrat-Regular";
+                        margin-top: 20px;
+                        display: block;
+                        @media (min-width: 768px) {
+                            font-size: 24px;
+                            line-height: 29px;
+                            margin-top: 50px;
+                        }
+                    }
+                }
+                & p {
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    font-family: "Montserrat-Regular";
+                    color: #FFFFFF;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 257px;
+                    @media (min-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            & .slick-dots {
+                display: flex;
+                position: absolute;
+                left: 50%;
+                bottom: 13px;
+                transform: translateX(-50%);
+                & li {
+                    padding: 0;
+                    width: 8px;
+                    height: 8px;
+                    margin: 0px 8px;
+                    cursor: pointer;
+                    position: relative;
+                    & button {
+                        border: none;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0;
+                        font-size: 0;
+                        line-height: 0;
+                        border-radius: 50%;
+                        background: #FFFFFF;
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                    &.slick-active {
+                        & button {
+                            background-color: #D7BFA9;
+                        }
+                    }
+                }
+                @media (min-width: 768px) {
+                    bottom: 23px;
+                }
+            }
+        }
+    }
+}

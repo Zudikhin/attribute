@@ -1,0 +1,261 @@
+.sale {
+    margin-top: 27px;
+    @media (min-width: 768px) {
+        margin-top: 138px;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 158px;
+    }
+    &_title {
+        & h2 {
+            font-family: "Montserrat-SemiBold";
+            font-size: 18px;
+            line-height: 22px;
+            color: #292929;
+            text-align: center;
+            position: relative;
+            @media (min-width: 768px) {
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -5px;
+                background-color: #D7BFA9;
+                height: 2px;
+                width: 34px;
+                @media (min-width: 768px) {
+                    width: 60px;
+                }
+            }
+        }
+    }
+    &_block {
+        position: relative;
+        &_slider {
+            width: 224px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            &_item {
+                &_main {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    background-color: #F0F0F0;
+                    box-sizing: border-box;
+                    padding-bottom: 15px;             
+                    &_img {
+                        height: 224px;
+                        width: 100%;
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &_colors {
+                        display: flex;
+                        margin-left: 5px;
+                        margin-top: 24px;
+                        min-height: 17px;
+                        &_item {
+                            width: 17px;
+                            height: 17px;
+                            border: 1px solid #FFFFFF;
+                            border-radius: 50%;
+                            margin-left: 10px;
+                        }
+                    }
+                    &_title {
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        min-height: 50px;
+                        & a {
+                            font-family: "Montserrat-Regular";
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: 0.17em;
+                            color: #292929;
+                        }
+                    }
+                    &_price {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 18px;
+                        margin-top: 8px;
+                        min-height: 44px;
+                        &_old {
+                            font-size: 14px;
+                            line-height: 17px;
+                            letter-spacing: 0.17em;
+                            color: #888888;
+                            font-family: "Montserrat-Regular";
+                            min-height: 17px;
+                            &:hover {
+                                color: #888888;
+                            }
+                        }
+                        &_current {
+                            font-family: "Montserrat-Bold";
+                            font-size: 18px;
+                            line-height: 22px;
+                            letter-spacing: 0.17em;
+                            color: #292929;
+                            display: inline-block;
+                            margin-top: 5px;
+                            &:hover {
+                                color: #292929;
+                            }
+                        }
+                    }
+                    &_detail {
+                        display: block;
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        text-align: center;
+                        width: 194px;
+                        height: 45px;
+                        background-color: #D7BFA9;
+                        font-size: 12px;
+                        line-height: 45px;
+                        letter-spacing: 0.17em;
+                        color: #FFFFFF;
+                        font-family: "Montserrat-Regular";
+                        &:hover {
+                            color: #FFFFFF;
+                        }
+                    }
+                    &_not_available {
+                        display: block;
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        text-align: center;
+                        width: 194px;
+                        height: 45px;
+                        background: #DCDCDC;
+                        font-size: 12px;
+                        line-height: 45px;
+                        letter-spacing: 0.17em;
+                        color: #2B2B2B;
+                        font-family: "Montserrat-Regular";
+                        &:hover {
+                            color: #2B2B2B;
+                        }
+                    }
+
+                }
+            }
+            & .slick-list {
+                padding-top: 20px;
+                padding-bottom: 50px;
+            }
+            @media (min-width: 768px) {
+                width: 620px;
+                & .slick-slide {
+                    margin: 0 10px;
+                }
+                & .slick-list {
+                    margin: 0 -10px;
+                    padding-top: 40px;
+                }
+                &_item {
+                    &_main {
+                        width: 300px;
+                        padding-bottom: 20px;
+                        &_img {
+                            height: 262px;
+                        }
+                        &_colors {
+                            margin-top: 30px;
+                            margin-left: 10px;
+                            min-height: 20px;
+                            &_item {
+                                width: 20px;
+                                height: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                        &_title {
+                            margin-top: 9px;
+                            min-height: 51px;
+                            margin-left: 20px;
+                            & a {
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
+                        }
+                        &_price {
+                            margin-left: 20px;
+                            min-height: 54px;
+                            &_old {
+                                font-size: 16px;
+                                line-height: 20px;
+                                min-height: 20px;
+                            }
+                            &_current {
+                                font-size: 24px;
+                                line-height: 29px;
+                            }
+                        }
+                        &_detail {
+                            width: 260px;
+                            margin-left: 20px;
+                            margin-top: 20px;
+                            font-size: 14px;
+                        }
+                        &_not_available {
+                            width: 260px;
+                            margin-left: 20px;
+                            margin-top: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            @media (min-width: 1200px) {
+                width: 100%;
+                & .slick-list {
+                    margin: 0 -12px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 50px;
+                    padding-bottom: 100px;
+                }
+                &_item {
+                    &_main {
+                        transition: all 0.2s linear;
+                        width: 262px;
+                        &_detail {
+                            width: 223px;
+                        }
+                        &:hover {
+                            transition: all 0.2s linear;
+                            filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.15));
+                        }
+                    } 
+                }
+            }
+        }
+        &_arrows {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            & button {
+                background-color: transparent;
+                border: none;
+            }
+            @media (min-width: 1200px) {
+                width: 1230px;
+                left: -45px;
+            }
+        }
+    }
+}

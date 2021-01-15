@@ -21,6 +21,8 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        speed: 300,
         dots: true,
         arrows: false,
         fade: true
@@ -30,6 +32,8 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        speed: 300,
         dots: true,
         arrows: false,
         fade: true
@@ -66,6 +70,10 @@ $(document).ready(function () {
     });
 
     $(".sidebar_content_menu li img").click(function() {
+      $(this).parent().toggleClass("drop");
+    });
+
+    $(".sidebar_content_colors_title").click(function() {
       $(this).parent().toggleClass("drop");
     });
 
