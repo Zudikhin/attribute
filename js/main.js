@@ -28,6 +28,33 @@ $(document).ready(function () {
         fade: true
     });
 
+    $('.product_main_sliders_for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      fade: true,
+      asNavFor: '.product_main_sliders_nav'
+    });
+
+    $('.product_main_sliders_nav').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.product_main_sliders_for',
+      dots: false,
+    });
+
+    $('.product_main_sliders_for').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      var slide = $(this).find(`[data-slick-index='${currentSlide}']`);
+      var detectVideo = slide.children().children().children();
+      if(detectVideo.is('video')) {
+        detectVideo.trigger('play');
+      } else {
+        var video = $(this).find('video');
+        video.trigger('pause');
+      }
+    });
+
     $('.home_categories_block_slider').slick({
         infinite: true,
         slidesToShow: 1,
