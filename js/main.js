@@ -38,10 +38,11 @@ $(document).ready(function () {
     });
 
     $('.product_main_sliders_nav').slick({
-      slidesToShow: 1,
+      slidesToShow: 10,
       slidesToScroll: 1,
       asNavFor: '.product_main_sliders_for',
       dots: false,
+      focusOnSelect: true
     });
 
     $('.product_main_sliders_for').on('afterChange', function(event, slick, currentSlide, nextSlide){
@@ -71,6 +72,7 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
+        fade: false,
         arrows: true,
         prevArrow: $('.sale_block_arrows_prev'),
         nextArrow: $('.sale_block_arrows_next'),
@@ -79,25 +81,62 @@ $(document).ready(function () {
               breakpoint: 1200,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                fade: false
               }
             },
             {
                 breakpoint: 577,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToScroll: 1,
+                  fade: true
                 }
               }
           ]
     });
 
-    $(".header_drop ul li img").click(function() {
-      $(this).parent().toggleClass("drop");
+    $('.popular_block_slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      fade: false,
+      arrows: false,
+      autoplay: true,
+      speed: 500,
+      prevArrow: $('.popular_block_arrows_prev'),
+      nextArrow: $('.popular_block_arrows_next'),
+      responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              fade: false,
+              arrows: true,
+              autoplay: false
+            }
+          },
+          {
+              breakpoint: 577,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                arrows: true,
+                autoplay: false
+              }
+            }
+        ]
     });
 
-    $(".sidebar_content_menu li img").click(function() {
-      $(this).parent().toggleClass("drop");
+    $(".header_drop_item").click(function() {
+      $(this).toggleClass("drop");
+    });
+
+    $(".sidebar_content_menu_drop").click(function() {
+      $(this).toggleClass("drop");
     });
 
     $(".sidebar_content_colors_title").click(function() {

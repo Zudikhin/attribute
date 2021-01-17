@@ -1,0 +1,51 @@
+.return {
+    margin-top: 55px;
+    margin-bottom: 50px;
+    @media (min-width: 768px) {
+        margin-top: 122px;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 0px;
+        position: relative;
+        margin-bottom: 100px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            background-color: #F0F0F0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &_main {
+        @media (min-width: 1200px) {
+            margin-left: 10px;
+        }
+        & h1 {
+            font-family: "Montserrat-SemiBold";
+            font-size: 16px;
+            line-height: 20px;
+            color: #292929;
+            @media (min-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+        & p {
+            font-family: "Montserrat-Medium";
+            font-size: 14px;
+            line-height: 17px;
+            color: #292929;
+            margin-top: 20px;
+        }
+        & h4 {
+            font-family: "Montserrat-SemiBold";
+            font-size: 16px;
+            line-height: 20px;
+            color: #292929;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -154,9 +154,16 @@
         }
         & li {
             margin-bottom: 30px;
+            cursor: pointer;
             & img {
                 transition: all 0.2s linear;
                 transform: rotate(0deg);
+            }
+            & span {
+                font-family: "Montserrat-Regular";
+                font-size: 18px;
+                line-height: 22px;
+                color: #292929;
             }
             & a {
                 font-family: "Montserrat-Regular";

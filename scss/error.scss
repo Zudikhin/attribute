@@ -1,0 +1,84 @@
+.error {
+    margin-bottom: 50px;
+    @media (min-width: 1200px) {
+        position: relative;
+        margin-bottom: 100px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            background-color: #F0F0F0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &_main {
+        @media (min-width: 1200px) {
+            margin-bottom: 121px;
+        }
+        &_text {
+            display: flex;
+            justify-content: center;
+            margin-top: 42px;
+            @media (min-width: 768px) {
+                margin-top: 50px;
+            }
+            @media (min-width: 1200px) {
+                margin-top: 132px;
+            }
+            &_mob {
+                display: block;
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+            &_desk {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+        &_img {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            @media (min-width: 768px) {
+                margin-top: 40px;
+            }
+            &_mob {
+                display: block;
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+            &_desk {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+        &_back {
+            display: block;
+            width: 263px;
+            height: 45px;
+            margin: 0 auto;
+            font-family: "Montserrat-Medium";
+            font-size: 13px;
+            line-height: 45px;
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #D7BFA9;
+            margin-top: 10px;
+            @media (min-width: 768px) {
+                margin-top: 60px;
+            }
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
