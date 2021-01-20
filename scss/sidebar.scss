@@ -2,13 +2,20 @@
     display: none;
     @media (min-width: 1200px) {
         display: block;
+        position: relative;
+        padding-right: 0px;
     }
     &_content {
+        max-width: 360px;  
         background-color: #F0F0F0;
-        max-width: 360px;
-        height: 100%;
-        position: relative;
-        padding-top: 70px;
+        height: 100%;     
+        &_scroll {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
         &_menu {
             & li {
                 margin-bottom: 30px;
@@ -85,9 +92,6 @@
             }
         }
         &_address {
-            position: absolute;
-            left: 0px;
-            bottom: 25px;
             display: flex;
             flex-direction: column;
             width: 294px;
@@ -180,20 +184,30 @@
     &-shop {
         @media (min-width: 1200px) {
             & .sidebar_content {
-                height: calc(100% - 135px);
+                width: calc(100% - 20px);
+                height: calc(100% - 104px);
             }
         }
     }
     &-product {
         @media (min-width: 1200px) {
             & .sidebar_content {
+                width: calc(100% - 20px);
                 height: calc(100% - 100px);
             }
         }
     }
     &-privacy_policy {
-        & .sidebar_content {
+        @media (min-width: 1200px) {
+            width: calc(25% - 20px);
             height: 1068px;
+        }
+    }
+    &-return {
+        @media (min-width: 1200px) {
+            & .sidebar_content {
+                width: calc(100% - 20px);
+            }
         }
     }
 }

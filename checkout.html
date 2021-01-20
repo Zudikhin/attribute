@@ -91,10 +91,10 @@
     </div>
 
     <div class="product_title_mob">
-      <h3>Контакты</h3>
+      <h3>Детали заказа</h3>
     </div>
 
-    <section class="contacts">
+    <section class="checkout">
       <div class="container">
         <div class="row">
           <div class="col-3 sidebar sidebar-return">
@@ -147,41 +147,125 @@
                   </li>
   
                 </ul>
-              </div>              
+              </div>
             </div>
           </div>
           <div class="col-12 col-xl-9">
-            <div class="contacts_main">
-              <h1>Контакты</h1>
+            <div class="checkout_main">
+              <div class="checkout_main_payment">
+                <div id="order_review" class="woocommerce-checkout-review-order">
 
-              <div class="contacts_main_info">
+                  <h4>Ваш заказ</h4>
 
-                <div class="contacts_main_info_left">
-                  <div class="contacts_main_info_left_links">
-                    <a class="contacts_main_info_left_links_tel" href="tel:+7(999) 999-99-99">+7(999) 999-99-99</a>
-                    <a href="#"><img src="img/footer/viber.svg" alt=""></a>
-                    <a href="#"><img src="img/footer/wup.svg" alt=""></a>
+                  <div class="checkout_main_payment_item checkout_main_payment_item-quantity">
+                    <span class="checkout_main_payment_item_name">Количество товаров</span>
+                    <span class="checkout_main_payment_item_value">3 шт.</span>
                   </div>
-                  <div class="contacts_main_info_left_address">
-                    <img src="img/contacts/map_icon.svg" alt="">
-                    <a href="#">г.Москва, Ветошный переулок, 9 ТЦ «Никольский пассаж»</a>
+
+                  <div class="checkout_main_payment_item checkout_main_payment_item-sum">
+                    <span class="checkout_main_payment_item_name">Сумма заказа</span>
+                    <span class="checkout_main_payment_item_value">18 000 ₽</span>
                   </div>
+
+                  <ul id="shipping_method" class="woocommerce-shipping-methods">
+                      <li>
+                        <input id="first" type="radio" class="shipping_method">
+                        <label for="first">Пункт выдачи (СДЭК) по России: <span class="woocommerce-Price-amount amount"><bdi>180,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+                      <li>
+                        <input id="second" type="radio" class="shipping_method">
+                        <label for="second">Курьером (СДЭК) по России: <span class="woocommerce-Price-amount amount"><bdi>350,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+                      <li>
+                        <input id="three" type="radio" class="shipping_method">
+                        <label for="three">Почта России: <span class="woocommerce-Price-amount amount"><bdi>300,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+                      <li>
+                        <input id="four" type="radio" class="shipping_method">
+                        <label for="four">Курьером по Москве: <span class="woocommerce-Price-amount amount"><bdi>250,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+                      <li>
+                        <input id="five" type="radio" class="shipping_method">
+                        <label for="five">Курьером за МКАД: <span class="woocommerce-Price-amount amount"><bdi>600,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+                      <li>
+                        <input id="six" type="radio" class="shipping_method">
+                        <label for="six">Самовывоз: <span class="woocommerce-Price-amount amount"><bdi>0,00<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span></label>
+                      </li>
+
+
+
+
+                  </ul>
+
+                  <div class="checkout_main_payment_outcome">
+                    <span class="checkout_main_payment_outcome_name">Итог:</span>
+                    <span class="checkout_main_payment_outcome_value">414 180 ₽</span>
+                  </div>
+
+                  <div id="payment" class="woocommerce-checkout-payment">
+
+                    <div class="checkout__payment-outcome">
+                      
+                      <span class="name">Оплата банковской картой </span>
+                      <div class="img">
+                          <img src="img/checkout/visa.svg" alt="">
+                      </div>
+                    </div>
+
+                    <p class="text">
+                      Ваши личные данные будут использоваться для обработки ваших
+                      заказов, упрощения вашей работы с сайтом и для других целей,
+                      описанных в нашей <a href="/privacy-policy">политика конфиденциальности.</a>
+                    </p>
+
+                    <button type="submit" class="button alt" name="woocommerce_checkout_place_order" onclick="ym(54384361,'reachGoal','place_order'); return true;" id="place_order" value="Подтвердить заказ" data-value="Подтвердить заказ">Подтвердить заказ</button>
+
+                  </div>
+
+                
                 </div>
+              </div>
+              <div class="checkout_main_detail">
 
-                <div class="contacts_main_info_right">
-                  <a class="contacts_main_info_right_mail" href="mailto:attributeshop@yandex.ru">attributeshop@yandex.ru <img src="img/contacts/mail.svg" alt=""></a>
-                  <div class="contacts_main_info_right_address">
-                    <img src="img/contacts/map_icon.svg" alt="">
-                    <a href="#">г.Санкт-Петербург, ул.Декабристов 8</a>
-                  </div>
-                </div>
+                <h4>Детали оплаты</h4>
+
+                <p class="checkout_main_detail_name">
+                  <label>Имя</label>
+                  <span>
+                    <input type="text" placeholder="Имя">
+                  </span>
+                </p>
+
+                <p class="checkout_main_detail_surname">
+                  <label>Фамилия</label>
+                  <span>
+                    <input type="text" placeholder="Фамилия">
+                  </span>
+                </p>
+
+                <p class="checkout_main_detail_tel">
+                  <label>Телефон</label>
+                  <span>
+                    <input type="tel" placeholder="+7 (999) 999-99-99">
+                  </span>
+                </p>
+
+                <p>
+                  <label>Адрес</label>
+                  <span>
+                    <input type="text" placeholder="Номер дома и название улицы">
+                  </span>
+                </p>
+
+                <button type="submit" class="button alt" name="woocommerce_checkout_place_order" onclick="ym(54384361,'reachGoal','place_order'); return true;" id="place_order" value="Подтвердить заказ" data-value="Подтвердить заказ">Подтвердить заказ</button>
 
               </div>
-
-              <div class="contacts_main_map">
-                <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Donetsk+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-              </div>
-
             </div>
           </div>
         </div>

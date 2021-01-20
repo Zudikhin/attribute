@@ -139,8 +139,45 @@ $(document).ready(function () {
       $(this).toggleClass("drop");
     });
 
+    // $(".cart__main .cart__list .item .general .counter .count_input .quantity").on("change", ".qty", function () {
+    //   $("#update_cart").prop("disabled", false);
+    //   $("#update_cart").trigger("click");
+    // });
+  
+    $(".cart_main_list_item_general_counter_prev").click(function (e) {
+      e.preventDefault();
+      var defaultNumber = $(this).parent().find("input").val() - 1;
+      if (defaultNumber != 0) {
+        $(this).parent().find("input").val(defaultNumber);
+      } else {
+        return false;
+      }
+      // $("#update_cart").prop("disabled", false);
+      // $("#update_cart").trigger("click");
+    });
+  
+    $(".cart_main_list_item_general_counter_next").click(function (e) {
+      e.preventDefault();
+      var defaultNumber = $(this).parent().find("input").val();
+      var numberDefaultNumber = parseInt(defaultNumber);
+      var finalDefaultNumber = numberDefaultNumber + 1;
+      if (numberDefaultNumber <= 99) {
+        $(this).parent().find("input").val(finalDefaultNumber);
+      } else {
+        return false;
+      }
+      // $("#update_cart").prop("disabled", false);
+      // $("#update_cart").trigger("click");
+    });
+
     $(".sidebar_content_colors_title").click(function() {
       $(this).parent().toggleClass("drop");
     });
+
+    if($(document).width() > 1199) {
+      $(document).ready(function(){
+        $('.product_main_sliders_for_item').zoom();
+      });
+    }   
 
 });

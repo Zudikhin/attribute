@@ -124,6 +124,7 @@
                 @media (min-width: 768px) {
                     flex-direction: column;
                     margin-top: 0px;
+                    width: 31%;
                 }
                 @media (min-width: 1200px) {
                     width: 27%;
@@ -156,23 +157,25 @@
                         }
                     }
                     &_links {
-                        display: none;
-                        @media (min-width: 768px) {
-                            display: flex;
-                            margin-top: 10px;
-                            & a {
-                                margin-right: 8px;
-                            }
-                            &_tel {
-                                font-family: "Montserrat-Regular";
-                                font-size: 16px;
-                                line-height: 20px;
+                        display: flex;
+                        margin-top: 15px;
+                        justify-content: center;
+                        width: 100%;
+                        & a {
+                            margin-right: 8px;
+                        }
+                        &_tel {
+                            font-family: "Montserrat-Regular";
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #292929;
+                            margin-right: 10px;
+                            &:hover {
                                 color: #292929;
-                                margin-right: 10px;
-                                &:hover {
-                                    color: #292929;
-                                }
                             }
+                        }
+                        @media (min-width: 768px) {
+                            justify-content: flex-start;
                         }
                         @media (min-width: 1200px) {
                             margin-top: 15px;
@@ -216,7 +219,7 @@
                     }
                     &_insta {
                         width: 100%;
-                        margin-top: 50px;
+                        margin-top: 15px;
                         text-align: center;
                         @media (min-width: 768px) {
                             width: auto;

@@ -1,0 +1,364 @@
+.checkout {
+    @media (min-width: 1200px) {
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 100px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            background-color: #F0F0F0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &_main {
+        display: flex;
+        flex-direction: column;
+        &_payment {
+            background-color: #F0F0F0;
+            box-sizing: border-box;
+            padding: 15px 15px 15px 10px;
+            margin-top: 15px;
+            @media (min-width: 768px) {
+                padding: 30px 25px 25px 23px;
+                margin-bottom: 50px;
+            }
+            @media (min-width: 1200px) {
+                margin-bottom: 0px;
+                padding: 50px 44px 44px 30px;
+            }
+            & .woocommerce-checkout-review-order {
+                @media (min-width: 1200px) {
+                    position: relative;
+                }
+                & h4 {
+                    font-family: "Montserrat-Medium";
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #1E1E1E;
+                    @media (min-width: 768px) {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                }
+                & .checkout_main_payment_item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &_name {
+                        font-family: "Montserrat-Medium";
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #292929;
+                        @media (min-width: 768px) {
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                    }
+                    &_value {
+                        font-family: "Montserrat-SemiBold";
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #292929;
+                        @media (min-width: 768px) {
+                            font-size: 24px;
+                            line-height: 29px;
+                        }
+                    }
+                    &-quantity {
+                        position: relative;
+                        margin-top: 34px;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -30px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #DFDFDF;
+                        }
+                    }
+                    &-sum {
+                        margin-top: 60px;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -30px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #DFDFDF;
+                        }
+                    }
+                }
+                & ul {
+                    margin-top: 59px;
+                    & li {
+                        margin: 0px;
+                        position: relative;
+                        width: 100%;
+                        margin-top: 11px;
+                        @media (min-width: 768px) {
+                            margin-top: 30px;
+                        }
+                        & input {
+                            margin: 0px;
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            left: 0;
+                            top: 3px;
+                            z-index: 9;
+                        }
+                        & input[type="radio"]:checked + label::after {
+                            background-color: #D7BFA9;
+                        }
+                        & label {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-family: "Montserrat-Medium";
+                            font-size: 13px;
+                            line-height: 16px;
+                            color: #1e1e1e;
+                            position: relative;
+                            width: 100%;
+                            padding-left: 20px;
+                            @media (min-width: 768px) {
+                                padding-left: 27px;
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
+                            & span {
+                                font-family: "Montserrat-SemiBold";
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #292929;
+                                @media (min-width: 768px) {
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                }
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                left: 0px;
+                                top: 2px;
+                                width: 15px;
+                                height: 15px;
+                                background-color: #c4c4c4;
+                                border-radius: 50%;
+                                @media (min-width: 768px) {
+                                    top: 3px;
+                                }
+                            }
+                        }
+                    }
+                    @media (min-width: 1200px) {
+                        width: 417px;
+                    }
+                }
+                & .checkout__payment-outcome {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 30px;
+                    @media (min-width: 768px) {
+                        justify-content: flex-start;
+                        & .img {
+                            margin-left: 37px;
+                        }
+                    }
+                    & .name {
+                        font-family: "Montserrat-Medium";
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #1E1E1E;
+                    }
+                }
+            }
+            &_outcome {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 32px;
+                @media (min-width: 768px) {
+                    margin-top: 60px;
+                }
+                @media (min-width: 1200px) {
+                    width: 417px;
+                }
+                &_name {
+                    font-family: "Montserrat-Medium";
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #1E1E1E;
+                }
+                &_value {
+                    font-family: "Montserrat-SemiBold";
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #292929;
+                }
+            }
+            & .woocommerce-checkout-payment {
+                @media (min-width: 768px) {
+                    position: relative;
+                }
+                @media (min-width: 1200px) {
+                    width: 333px;
+                    position: absolute;
+                    right: 0px;
+                    top: 212px;
+                }
+                & button[type=submit] {
+                    display: none;
+                    @media (min-width: 768px) {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        bottom: 5px;
+                        width: 263px;
+                        height: 45px;
+                        background-color: #D7BFA9;
+                        border: none;
+                        font-size: 13px;
+                        line-height: 45px;
+                        color: #FFFFFF;
+                        font-family: "Montserrat-Medium";
+                    }
+                    @media (min-width: 1200px) {
+                        bottom: -68px;
+                        left: 0px;
+                    }
+                }
+                & .text {
+                    font-family: "Montserrat-Medium";
+                    font-size: 13px;
+                    line-height: 19px;
+                    color: #1E1E1E;
+                    margin-top: 11px;
+                    @media (min-width: 768px) {
+                        font-size: 13px;
+                        line-height: 19px;
+                        width: 316px;
+                    }
+                    & a {
+                        color: #D7BFA9;
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                order: 2;
+                margin-top: 30px;
+            }
+        }
+        &_detail {
+            margin-top: 30px;
+            & h4 {
+                font-family: "Montserrat-Medium";
+                font-size: 16px;
+                line-height: 20px;
+                color: #1E1E1E;
+            }
+            & p {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                padding: 0px 15px;
+                margin-top: 15px;
+                & label {
+                    font-family: "Montserrat-Regular";
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #1E1E1E;
+                }
+                & span {
+                    margin-top: 10px;
+                    & input {
+                        width: 100%;
+                        height: 40px;
+                        box-sizing: border-box;
+                        border: 1px solid #D7BFA9;
+                        font-family: "Montserrat-Regular";
+                        font-size: 13px;
+                        line-height: 40px;
+                        padding-left: 20px;
+                        &::placeholder {
+                            font-family: "Montserrat-Regular";
+                            font-size: 13px;
+                            line-height: 40px;
+                            color: #DCDCDC;
+                        }
+                    }
+                }
+            }
+            & button[type=submit] {
+                width: calc(100% - 30px);
+                height: 45px;
+                background-color: #D7BFA9;
+                border: none;
+                margin: 0 auto;
+                display: block;
+                font-size: 13px;
+                line-height: 45px;
+                color: #FFFFFF;
+                font-family: "Montserrat-Medium";
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+            @media (min-width: 768px) {
+                margin-top: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                order: 1;
+                & p {
+                    width: 100%;
+                    padding: 0px;
+                }
+                & h4 {
+                    display: none;
+                }
+                &_name {
+                    width: 223px !important;
+                }
+                &_surname {
+                    width: 223px !important;
+                }
+                &_tel {
+                    width: 223px !important;
+                }
+                & button[type=submit] {
+                    display: none;
+                }
+            }
+            @media (min-width: 1200px) {
+                margin-top: 0px;
+                & h4 {
+                    display: block;
+                    width: 100%;
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin-bottom: 10px;
+                }
+                & p {
+                    margin-top: 30px;
+                }
+                &_name {
+                    width: 262px !important;
+                }
+                &_surname {
+                    width: 262px !important;
+                }
+                &_tel {
+                    width: 262px !important;
+                }
+            }
+        }
+    }
+}

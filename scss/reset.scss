@@ -31,11 +31,32 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
+    min-height: 100%;
 }
 
 ol, ul {
 	list-style: none;
+}
+
+ul li {
+    -webkit-tap-highlight-color: transparent;
+}
+
+span {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    -webkit-tap-highlight-color: transparent;
+}
+
+div {
+    -webkit-tap-highlight-color: transparent;
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }
 
 blockquote, q {
@@ -125,6 +146,8 @@ html {
  */
 a {
     text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 a:focus {
     outline: none;
@@ -382,4 +405,13 @@ body {
             display: block;
         }
     }
+}
+
+#init {
+    position: absolute;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    z-index: 1000;
 }
